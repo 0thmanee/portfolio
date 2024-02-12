@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./media/Webclip.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./media/Webclip.png" type="image/x-icon" />
+    <!-- GOUGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>404 Error</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      img {
+        max-height: 100%;
+      }
+      @media (max-width: 62em) {
+        img {
+          max-height: auto;
+          max-width: 100%;
+        }
+      }
+      a {
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        color: #fff;
+        background-color: #fc6d20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotate(20deg) translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="media/404.png" alt="404 Error" />
+    <a href="./">Back Home</a>
+  </body>
+</html>
