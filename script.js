@@ -102,24 +102,33 @@ moreProjects.addEventListener("click", function (e) {
   e.preventDefault();
   moreProjects.style.display = "none";
   projectsHidden.forEach((pr) => pr.classList.remove("project_hidden"));
-});file:///home/othmane/Desktop/menu
-
+});
+///home/othmane/Desktop/menu
 
 // Place rojects button
-if (mediaQuery.matches) {
+file: if (mediaQuery.matches) {
   standBtns.forEach((btn) => btn.classList.add("project_hidden"));
   projects.forEach((p, i) => {
     let projecdomain;
+    let projectHref;
     if (projects[i].querySelector("img").alt == "bugbeat")
       projecdomain = ".tech";
-    else if (projects[i].querySelector("img").alt == "2baconcours" || projects[i].querySelector("img").alt == "bsecure-club")
+    else if (
+      projects[i].querySelector("img").alt == "2baconcours" ||
+      projects[i].querySelector("img").alt == "bsecure-club"
+    )
+      projecdomain = ".com";
+    else if (projects[i].querySelector("img").alt == "kickspace")
       projecdomain = ".com";
     else projecdomain = ".netlify.app";
+    projectHref = `${
+      projects[i].querySelector("img").alt == "kickspace"
+        ? "https://www.figma.com/file/EHAWbyRC6AoptDPGDrYojx/design2?type=design&node-id=1%3A2&mode=design&t=cSmVHixfWn7zMgoB-1"
+        : "https://" + projects[i].querySelector("img").alt + projecdomain
+    }`;
     p.insertAdjacentHTML(
       "beforeend",
-      `<a class="btn sec_btn standart" target="_blank" href="https://${
-        projects[i].querySelector("img").alt
-      }${projecdomain}">See project</a
+      `<a class="btn sec_btn standart" target="_blank" href="${projectHref}">See project</a
 >`
     );
   });
