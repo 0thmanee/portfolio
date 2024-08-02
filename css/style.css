@@ -136,6 +136,7 @@
 .switchmode {
   justify-content: center;
   cursor: pointer;
+  display: none;
 }
 .switchmode i {
   font-size: 2.4rem;

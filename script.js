@@ -67,15 +67,24 @@ links.forEach((link) => {
 
 // Dark mode
 
-switchmode.addEventListener("click", function () {
-  switchIcon.classList.toggle("fa-sun");
-  switchIcon.classList.toggle("fa-moon");
-  body.classList.toggle("dark_mode");
-  imgsChanged.forEach((img) => {
-    img.src = `./media/${img.alt}${
-      switchIcon.classList.contains("fa-moon") ? 1 : 2
-    }.png`;
-  });
+// switchmode.addEventListener("click", function () {
+//   switchIcon.classList.toggle("fa-sun");
+//   switchIcon.classList.toggle("fa-moon");
+//   body.classList.toggle("dark_mode");
+//   imgsChanged.forEach((img) => {
+//     img.src = `./media/${img.alt}${
+//       switchIcon.classList.contains("fa-moon") ? 1 : 2
+//     }.png`;
+//   });
+// });
+
+switchIcon.classList.toggle("fa-sun");
+switchIcon.classList.toggle("fa-moon");
+body.classList.toggle("dark_mode");
+imgsChanged.forEach((img) => {
+  img.src = `./media/${img.alt}${
+    switchIcon.classList.contains("fa-moon") ? 1 : 2
+  }.png`;
 });
 /* document.documentElement.style.setProperty("--main-color", "red"); */
 
