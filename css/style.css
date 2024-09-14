@@ -65,7 +65,7 @@
     width: 100vw;
     height: 100vh;
     padding-top: 10rem;
-    background-color: #000;
+    background-color: var(--dark-bcg-color);
     z-index: 30;
     /* overflow: hidden; */
   }
