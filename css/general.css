@@ -3,8 +3,8 @@
   --dark-p-color: #5e5e5e;
   --light-p-color: #d5d5d5;
   --light-bcg-color: #d7e0ff;
-  --dark-bcg-color: #242424;
-  --dark-bcg-color2: #494846;
+  --dark-bcg-color: rgba(22, 22, 22, 0.9);
+  --dark-bcg-color2: rgba(26, 26, 26, 0.9);
   --hover-bcg: #fc6d20;
   --section-padding: 9rem;
   --main-transition: 0.2s;
@@ -22,7 +22,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1;
-  color: #000;
+  color: #fff;
+  background-color: var(--dark-bcg-color);
   position: relative;
 }
 .dark_mode {
@@ -42,27 +43,9 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 1.5rem;
+  max-width: 160rem;
 }
-/* SMALL DEVICES: 768px */
-@media (min-width: 48em) {
-  .container {
-    width: 75rem;
-  }
-}
-/* MEDIUM DEVICES: 992px */
-@media (min-width: 62em) {
-  .container {
-    width: 97rem;
-  }
-}
-@media (max-width: 70em) {
-}
-/* LARGE DEVICES: 1200px */
-@media (min-width: 75em) {
-  .container {
-    width: 117rem;
-  }
-}
+
 .flex {
   display: flex;
   align-items: center;
@@ -92,13 +75,13 @@ img {
 .social_icons {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 .link {
   transition: all var(--main-transition);
 }
 .social_icons i {
-  font-size: 2.4rem;
+  font-size: 3rem;
   transition: all var(--main-transition);
 }
 .section_heading {

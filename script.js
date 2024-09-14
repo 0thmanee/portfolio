@@ -65,40 +65,22 @@ links.forEach((link) => {
   link.addEventListener("mouseout", handleHover.bind(1));
 });
 
-// Dark mode
-
-// switchmode.addEventListener("click", function () {
-//   switchIcon.classList.toggle("fa-sun");
-//   switchIcon.classList.toggle("fa-moon");
-//   body.classList.toggle("dark_mode");
-//   imgsChanged.forEach((img) => {
-//     img.src = `./media/${img.alt}${
-//       switchIcon.classList.contains("fa-moon") ? 1 : 2
-//     }.png`;
-//   });
-// });
-
-switchIcon.classList.toggle("fa-sun");
-switchIcon.classList.toggle("fa-moon");
-body.classList.toggle("dark_mode");
-imgsChanged.forEach((img) => {
-  img.src = `./media/${img.alt}${
-    switchIcon.classList.contains("fa-moon") ? 1 : 2
-  }.png`;
-});
-/* document.documentElement.style.setProperty("--main-color", "red"); */
-
 // Back to top of the page
 const goTop = function (entries) {
   const [entry] = entries;
+  if (mediaQuery.matches)
+      return ;
   if (!entry.isIntersecting) {
-    topIcon.classList.remove("hidden");
-  } else topIcon.classList.add("hidden");
+    header.classList.add("sticky");
+  } else{
+    header.classList.remove("sticky");
+  }
 };
 const topObserver = new IntersectionObserver(goTop, {
   root: null,
   threshold: 0,
 });
+
 topObserver.observe(section1);
 
 // Scroll to top
