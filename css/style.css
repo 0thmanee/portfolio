@@ -194,7 +194,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(22, 22, 22, 0.97);
+  background-color: rgba(22, 22, 22, 0.9);
   z-index: 0;
 }
 /* .hero_section .container {
@@ -230,7 +230,7 @@
 }
 @media (max-width: 62em) {
   .hero_heading {
-    font-size: 5.2rem;
+    font-size: 6rem;
   }
 }
 .hero_heading span {
@@ -262,6 +262,7 @@
   }
 }
 .prim_btn {
+  font-size: 2rem;
   color: #fff;
   padding: 2rem 4rem;
   background-color: var(--main-color);
@@ -393,7 +394,7 @@
   }
 }
 .box {
-  background-color: var(--dark-bcg-color2);
+  background-color: #000;
   border-radius: 0.5rem;
   padding: 2rem;
   display: flex;
